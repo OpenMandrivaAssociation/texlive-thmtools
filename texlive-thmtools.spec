@@ -1,11 +1,11 @@
-# revision 23659
+# revision 24742
 # category Package
 # catalog-ctan /macros/latex/exptl/thmtools
-# catalog-date 2011-06-16 21:20:53 +0200
+# catalog-date 2011-12-03 11:39:13 +0100
 # catalog-license lppl
-# catalog-version 59
+# catalog-version 62
 Name:		texlive-thmtools
-Version:	59
+Version:	62
 Release:	1
 Summary:	Extensions to theorem environments
 Group:		Publishing
@@ -18,33 +18,30 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The bundle provides several packages for commonly-needed
 support for typesetting theorems. The packages should work with
 kernel theorems (theorems 'out of the box' with LaTeX), and the
 theorem and amsthm packages. Features of the bundle include: -
-a key-value interface to \mewtheorem; - a \listoftheorems
+a key-value interface to \newtheorem; - a \listoftheorems
 command; - hyperref and autoref compatibility; - a mechanism
 for restating entire theorems in a single macro call.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -60,6 +57,7 @@ for restating entire theorems in a single macro call.
 %{_texmfdistdir}/tex/latex/thmtools/thm-ntheorem.sty
 %{_texmfdistdir}/tex/latex/thmtools/thm-patch.sty
 %{_texmfdistdir}/tex/latex/thmtools/thm-restate.sty
+%{_texmfdistdir}/tex/latex/thmtools/thmdef-mdframed.sty
 %{_texmfdistdir}/tex/latex/thmtools/thmdef-shaded.sty
 %{_texmfdistdir}/tex/latex/thmtools/thmdef-thmbox.sty
 %{_texmfdistdir}/tex/latex/thmtools/thmtools.sty
@@ -82,6 +80,7 @@ for restating entire theorems in a single macro call.
 %doc %{_texmfdistdir}/source/latex/thmtools/thm-ntheorem.dtx
 %doc %{_texmfdistdir}/source/latex/thmtools/thm-patch.dtx
 %doc %{_texmfdistdir}/source/latex/thmtools/thm-restate.dtx
+%doc %{_texmfdistdir}/source/latex/thmtools/thmdef-mdframed.dtx
 %doc %{_texmfdistdir}/source/latex/thmtools/thmdef-shaded.dtx
 %doc %{_texmfdistdir}/source/latex/thmtools/thmdef-thmbox.dtx
 %doc %{_texmfdistdir}/source/latex/thmtools/thmtools.dtx
