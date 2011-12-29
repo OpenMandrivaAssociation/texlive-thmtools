@@ -28,16 +28,8 @@ a key-value interface to \newtheorem; - a \listoftheorems
 command; - hyperref and autoref compatibility; - a mechanism
 for restating entire theorems in a single macro call.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -86,7 +78,6 @@ for restating entire theorems in a single macro call.
 %doc %{_texmfdistdir}/source/latex/thmtools/thmtools.dtx
 %doc %{_texmfdistdir}/source/latex/thmtools/thmtools.ins
 %doc %{_texmfdistdir}/source/latex/thmtools/unique.dtx
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -97,5 +88,3 @@ for restating entire theorems in a single macro call.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
