@@ -88,3 +88,24 @@ for restating entire theorems in a single macro call.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 62-3
++ Revision: 805110
+- Update to latest release.
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 62-2
++ Revision: 756834
+- Rebuild to reduce used resources
+
+* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 62-1
++ Revision: 739940
+- texlive-thmtools
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 59-1
++ Revision: 719730
+- texlive-thmtools
+- texlive-thmtools
+- texlive-thmtools
+
