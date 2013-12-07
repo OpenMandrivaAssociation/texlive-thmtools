@@ -6,7 +6,7 @@
 # catalog-version 62
 Name:		texlive-thmtools
 Version:	62
-Release:	4
+Release:	5
 Summary:	Extensions to theorem environments
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/exptl/thmtools
