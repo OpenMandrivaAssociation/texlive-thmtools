@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version 62
 Name:		texlive-thmtools
-Version:	62
-Release:	11
+Version:	66
+Release:	1
 Summary:	Extensions to theorem environments
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/exptl/thmtools
