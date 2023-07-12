@@ -1,6 +1,6 @@
 Name:		texlive-thmtools
-Version:	63477
-Release:	2
+Version:	67018
+Release:	1
 Summary:	Extensions to theorem environments
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/exptl/thmtools
